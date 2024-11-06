@@ -67,7 +67,7 @@ router.get("/", function (req, res, next) {
     } else {
       //res.json(results);
     }
-    res.render("chat", { title: results });
+    res.render("chat", { messages: results });
   });
 });
 

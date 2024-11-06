@@ -1,12 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  
+
 
   h1="WebSocket クライアント"
+  h2="メッセージ履歴"
+  ul
+    each message in messages
+      li #{message.name}
   input(type="text" id="messageInput" placeholder="メッセージを入力")
   button(onclick="sendMessage()")= "送信"
   div(id="messages")
+
+
 
   script(src="./javascripts/chat.js")
